@@ -31,7 +31,7 @@ namespace MicwayTechTest.Controllers
         public IHttpActionResult GetDriver(int id)
         {
             if (id <= 0)
-                return BadRequest("'Id' field must be bigger than 0.");
+                return BadRequest("'Id' field must be greater than 0.");
 
             var driver = db.Drivers.Find(id);
 
@@ -60,7 +60,7 @@ namespace MicwayTechTest.Controllers
         public IHttpActionResult DeleteDriver(int id)
         {
             if (id <= 0)
-                return BadRequest("'Id' field must be bigger than 0.");
+                return BadRequest("'Id' field must be greater than 0.");
 
             var driver = db.Drivers.Find(id);
 
