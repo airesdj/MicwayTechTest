@@ -77,7 +77,7 @@ namespace MicwayTechTest.Controllers
         public IHttpActionResult GetDriver()
         {
             //Only 3 columns are returning in the query: id, full name (join between first and last name) and email
-            var drivers = db.Drivers.OrderBy(c => c.Id).Select(c => new { ID = c.Id, FullName = (c.FirstName + " " + c.LastName), Email = c.EmailAddress});
+            var drivers = db.Drivers.OrderBy(c => c.Id).Select(c => new { Id = c.Id, FullName = (c.FirstName + " " + c.LastName), Email = c.EmailAddress});
             return Ok(drivers);
         }
 
